@@ -1,0 +1,5 @@
+Release notes
+-------------
+
+Date          Version   Comment
+2019/03/15    1.0.0     First release

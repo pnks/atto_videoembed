@@ -1,0 +1,10 @@
+{
+    "name": "moodle-atto_studietube-button",
+    "builds": {
+        "moodle-atto_studietube-button": {
+            "jsfiles": [
+                "button.js"
+            ]
+        }
+    }
+}
