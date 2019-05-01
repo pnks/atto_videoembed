@@ -1,7 +1,7 @@
-#An Atto plugin to import content from the Studietube
+# An Atto plugin to import content from the Studietube
 
-##Description
-Publish content from Studietube
+## Description
+Publish content from Studietube, part of LærIT.dk webservices.
 
 ## Installation
 - Open your Site administration
