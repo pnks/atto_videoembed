@@ -60,6 +60,7 @@ Y.namespace('M.atto_studietube').Button = Y.Base.create('button', Y.M.editor_att
 
     initializer: function() {
         var self = this;
+
         window.addEventListener("message", function(event){ self._handleMedia(event, self); }, false);
         this.addButton({
             icon: 'studietube',
@@ -82,7 +83,7 @@ Y.namespace('M.atto_studietube').Button = Y.Base.create('button', Y.M.editor_att
             border: 'none',
             width: '100%'
         });
-        iframe.setAttribute('src', '//www.skoletube.dk/app/bluebird');
+        iframe.setAttribute('src', '//www.skoletube.dk/app/bluebird/1?passtype=direct&idcaller='+this.editor._yuid);
 
         dialogue.set('bodyContent', iframe)
                 .show();
@@ -97,8 +98,20 @@ Y.namespace('M.atto_studietube').Button = Y.Base.create('button', Y.M.editor_att
         var host = obj.get('host'),
             self = obj;
     
-        newhtml = Y.Node.create('<iframe src="'+event.data+'" width="480" height="390" frameborder="0" allowfullscreen></iframe>');
+        ret = eval(event.data);
+        
+        if(typeof ret[3] === 'undefined' || ret[3] !== obj.editor._yuid)
+        {
+            return;
+        }
+        
+        newhtml = Y.Node.create('<iframe src="'+ret[2]+'" width="480" height="390" frameborder="0" allowfullscreen></iframe>');
+
         self.editor.appendChild(newhtml);
+        
+        this.getDialogue({
+            focusAfterHide: null
+        }).hide();
     }
 }, {
     ATTRS: {
