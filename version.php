@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2019031501;        // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2019050201;        // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires  = 2014051200;        // Requires Moodle 2.7 or higher, when Atto was added to core.
 $plugin->component = 'atto_studietube';  // Full name of the plugin (used for diagnostics).
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = '1.3.7 (Build 2018060401)'; // Human readable version information.
+$plugin->release   = '1.3.8 (Build 2019050201)'; // Human readable version information.
