@@ -67,7 +67,7 @@ Y.namespace('M.atto_studietube').Button = Y.Base.create('button', Y.M.editor_att
         });
     },
     
-    _displayDialogue: function(e) {
+    _displayDialogue: function() {
         var dialogue = this.getDialogue({
             headerContent: 'Studietube',
             width: '600px',
@@ -91,10 +91,11 @@ Y.namespace('M.atto_studietube').Button = Y.Base.create('button', Y.M.editor_att
     
     _handleMedia: function(event, obj) {
         if (event.origin !== "https://www.skoletube.dk" && event.origin !== "http://www.skoletube.dk")
-        return;
-        
-        var host = obj.get('host'),
-            self = obj;
+        {
+            return;
+        }
+     
+        var self = obj;
     
         ret = eval(event.data);
         
@@ -103,9 +104,12 @@ Y.namespace('M.atto_studietube').Button = Y.Base.create('button', Y.M.editor_att
             return;
         }
         
-        newhtml = Y.Node.create('<iframe src="'+ret[2]+'" width="480" height="390" frameborder="0" allowfullscreen></iframe>');
+        src = '//www.skoletube.dk/e/'+ret[0]+'/0?nopanel=tru';
+        
+        newhtml = Y.Node.create('<div style="width: 100%;height:0;position:relative;padding-bottom:56.25%;"><iframe src="'+src+'" style="width:100%;height:100%;position:absolute;top:0;left: 0; " frameborder="0" border="0" scrolling="no" allowfullscreen="1"></iframe></div>');
 
         self.editor.appendChild(newhtml);
+        self.markUpdated();
         
         this.getDialogue({
             focusAfterHide: null
