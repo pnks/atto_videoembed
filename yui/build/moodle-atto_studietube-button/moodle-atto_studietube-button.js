@@ -83,7 +83,7 @@ Y.namespace('M.atto_studietube').Button = Y.Base.create('button', Y.M.editor_att
             border: 'none',
             width: '100%'
         });
-        iframe.setAttribute('src', '//www.skoletube.dk/app/bluebird/1?passtype=direct&idcaller='+this.editor._yuid);
+        iframe.setAttribute('src', '//www.studietube.dk/app/bluebird/1?passtype=direct&idcaller='+this.editor._yuid);
 
         dialogue.set('bodyContent', iframe)
                 .show();
@@ -92,7 +92,7 @@ Y.namespace('M.atto_studietube').Button = Y.Base.create('button', Y.M.editor_att
     },
     
     _handleMedia: function(event, obj) {
-        if (event.origin !== "https://www.skoletube.dk" && event.origin !== "http://www.skoletube.dk")
+        if (event.origin !== "https://www.studietube.dk" && event.origin !== "http://www.studietube.dk")
         {
             return;
         }
@@ -106,7 +106,7 @@ Y.namespace('M.atto_studietube').Button = Y.Base.create('button', Y.M.editor_att
             return;
         }
         
-        src = '//www.skoletube.dk/e/'+ret[0]+'/0?nopanel=tru';
+        src = '//www.studietube.dk/e/'+ret[0]+'/0?nopanel=tru';
         
         newhtml = Y.Node.create('<div style="width: 100%;height:0;position:relative;padding-bottom:56.25%;"><iframe src="'+src+'" style="width:100%;height:100%;position:absolute;top:0;left: 0; " frameborder="0" border="0" scrolling="no" allowfullscreen="1"></iframe></div>');
 
