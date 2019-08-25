@@ -1,7 +1,7 @@
 {
-    "name": "moodle-atto_studietube-button",
+    "name": "moodle-atto_videoembed-button",
     "builds": {
-        "moodle-atto_studietube-button": {
+        "moodle-atto_videoembed-button": {
             "jsfiles": [
                 "button.js"
             ]

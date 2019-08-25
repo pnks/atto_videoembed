@@ -17,12 +17,12 @@
 /**
  * Atto mod for Lærit.dk
  *
- * @package    atto_studietube
+ * @package    atto_videoembed
  * @copyright  2019 Damian Alarcon
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace atto_studietube\privacy;
+namespace atto_videoembed\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 

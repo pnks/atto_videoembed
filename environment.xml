@@ -1,5 +1,5 @@
 ﻿  <COMPATIBILITY_MATRIX>
-  <PLUGIN name="atto_studietube">
+  <PLUGIN name="atto_videoembed">
     <PHP_EXTENSIONS>
       <PHP_EXTENSION name="xsl" level="required" />
     </PHP_EXTENSIONS>

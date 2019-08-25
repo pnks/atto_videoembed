@@ -17,7 +17,7 @@
 /**
  * Atto mod for Lærit.dk
  *
- * @package    atto_studietube
+ * @package    atto_videoembed
  * @copyright  2019 Damian Alarcon
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -25,11 +25,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 /**
- * Enable studietube plugin button in the files group on installation
+ * Enable videoembed plugin button in the files group on installation
  *
  * @return void
  */
-function xmldb_atto_studietube_install() {
+function xmldb_atto_videoembed_install() {
     $toolbar = get_config('editor_atto', 'toolbar');
     $found = false;
     if (strpos($toolbar, 'files')) {
@@ -37,7 +37,7 @@ function xmldb_atto_studietube_install() {
         foreach ($groups as $i => $group) {
             $parts = explode('=', $group);
             if (trim($parts[0]) == 'files') {
-                $groups[$i] = 'files = studietube, ' . trim($parts[1]);
+                $groups[$i] = 'files = videoembed, ' . trim($parts[1]);
                 $found = true;
             }
         }
@@ -46,7 +46,7 @@ function xmldb_atto_studietube_install() {
         foreach ($groups as $i => $group) {
             $parts = explode('=', $group);
             if (trim($parts[0]) == 'insert') {
-                $groups[$i] = 'insert = studietube, ' . trim($parts[1]);
+                $groups[$i] = 'insert = videoembed, ' . trim($parts[1]);
                 $found = true;
             }
         }
@@ -55,7 +55,7 @@ function xmldb_atto_studietube_install() {
         foreach ($groups as $i => $group) {
             $parts = explode('=', $group);
             if (trim($parts[0]) == 'other') {
-                $groups[$i] = 'other = studietube, ' . trim($parts[1]);
+                $groups[$i] = 'other = videoembed, ' . trim($parts[1]);
                 $found = true;
             }
         }

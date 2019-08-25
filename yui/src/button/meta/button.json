@@ -1,5 +1,5 @@
 {
-    "moodle-atto_studietube-button": {
+    "moodle-atto_videoembed-button": {
         "requires": [
             "moodle-editor_atto-plugin"
         ]
